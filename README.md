@@ -4,7 +4,7 @@ Eonil/TCPIPSocket.Swift
 Hoon H.
 
 
-Provides super simple, regular, thin and minimal TCP/IP socket wrapper on Swift.
+Provides simple, regular, thin, synchronous and minimal TCP/IP socket wrapper on Swift.
 
 This just wraps BSD socket as is, and does not try to add any extra abstraction.
 I believe this can serve any applications, but I intended this for quicky apps. 
