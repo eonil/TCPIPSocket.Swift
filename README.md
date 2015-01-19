@@ -80,8 +80,10 @@ Missings
 License
 -------
 Licensed under MIT license.
-This library is written by Hoon H., and hosted on Github.
+This library is written by Hoon H., and hosted on [Github](https://github.com/Eonil/TCPIPSocket.Swift).
+
 Copyright(c) Hoon H.. All rights reserved.
+
 
 
 
