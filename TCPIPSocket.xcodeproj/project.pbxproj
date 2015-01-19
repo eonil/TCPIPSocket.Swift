@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		4560EDB51A6D51B400AE7A91 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560EDB41A6D51B400AE7A91 /* main.swift */; };
 		4560EDBE1A6D521B00AE7A91 /* TCPIPSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560EDBD1A6D521B00AE7A91 /* TCPIPSocket.swift */; };
-		4560EDC01A6D524A00AE7A91 /* DarwinUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560EDBF1A6D524A00AE7A91 /* DarwinUtility.swift */; };
-		4560EDC21A6D526300AE7A91 /* SwiftExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560EDC11A6D526300AE7A91 /* SwiftExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,8 +28,6 @@
 		4560EDB41A6D51B400AE7A91 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		4560EDBB1A6D51BC00AE7A91 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4560EDBD1A6D521B00AE7A91 /* TCPIPSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCPIPSocket.swift; sourceTree = "<group>"; };
-		4560EDBF1A6D524A00AE7A91 /* DarwinUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarwinUtility.swift; sourceTree = "<group>"; };
-		4560EDC11A6D526300AE7A91 /* SwiftExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				4560EDBD1A6D521B00AE7A91 /* TCPIPSocket.swift */,
-				4560EDBF1A6D524A00AE7A91 /* DarwinUtility.swift */,
-				4560EDC11A6D526300AE7A91 /* SwiftExtensions.swift */,
 				4560EDB41A6D51B400AE7A91 /* main.swift */,
 			);
 			path = TCPIPSocket;
@@ -130,9 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4560EDB51A6D51B400AE7A91 /* main.swift in Sources */,
-				4560EDC21A6D526300AE7A91 /* SwiftExtensions.swift in Sources */,
 				4560EDBE1A6D521B00AE7A91 /* TCPIPSocket.swift in Sources */,
-				4560EDC01A6D524A00AE7A91 /* DarwinUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +239,7 @@
 				4560EDBA1A6D51B400AE7A91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BDEA83A4-7E70-47D5-AC37-1C3B71423287</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TCPIPSocket</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BB5666AE88179C3F6A6E8C5937EC83BE83C6C9E9</key>
+		<string>https://github.com/Eonil/TCPIPSocket.Swift.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TCPIPSocket.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BB5666AE88179C3F6A6E8C5937EC83BE83C6C9E9</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Eonil/TCPIPSocket.Swift.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BB5666AE88179C3F6A6E8C5937EC83BE83C6C9E9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BB5666AE88179C3F6A6E8C5937EC83BE83C6C9E9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TCPIPSocket.Swift</string>
+		</dict>
+	</array>
+</dict>
+</plist>

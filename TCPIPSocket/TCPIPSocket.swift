@@ -31,16 +31,6 @@ struct TCPIPSocketAddress {
 	}
 	private let	_number:UInt32		///	Uses host-endian.
 }
-extension TCPIPSocketAddress {
-	static let	localhost	=	TCPIPSocketAddress(127,0,0,1)
-	
-//	///	Resolves a hostname to an address synchronously.
-//	///	BEWARE! This resolution may take very long if the name is not yet cached in local machine,
-//	///	and caller will be blocked until resolution finishes.
-//	static func resolve(hostname:String) -> TCPIPSocketAddress {
-//		
-//	}
-}
 
 
 
@@ -121,6 +111,47 @@ final class TCPIPSocket {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///	MARK:
+///	MARK:	Extensions
+
+extension TCPIPSocketAddress {
+	static let	localhost	=	TCPIPSocketAddress(127,0,0,1)
+	
+	//	///	Resolves a hostname to an address synchronously.
+	//	///	BEWARE! This resolution may take very long if the name is not yet cached in local machine,
+	//	///	and caller will be blocked until resolution finishes.
+	//	static func resolve(hostname:String) -> TCPIPSocketAddress {
+	//
+	//	}
+}
+
 extension TCPIPSocket {
 	///	http://en.wikipedia.org/wiki/Nagle%27s_algorithm
 	///	http://stackoverflow.com/questions/7286592/set-tcp-quickack-and-tcp-nodelay
@@ -153,6 +184,125 @@ extension TCPIPSocket {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///	MARK:
+///	MARK:	Darwin Utility
+
+private func postconditionDarwinAPICallResultCodeState(ok:Bool) {
+	if !ok {
+		let	n	=	Darwin.errno
+		let	p	=	strerror(n)
+		let	s	=	String(UTF8String: p)
+		fatalError("Darwin API call error: (\(n)) \(s)")
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///	MARK:
+///	MARK:	Swift+TCPIPSocket
+
+extension UInt16 {
+	var networkEndian:UInt16 {
+		get {
+			return	bigEndian
+		}
+	}
+}
+
+extension UInt32 {
+	var networkEndian:UInt32 {
+		get {
+			return	bigEndian
+		}
+	}
+}
+
+extension UInt64 {
+	var networkEndian:UInt64 {
+		get {
+			return	bigEndian
+		}
+	}
+}
+
+
+
+private func unsafePointerCast<T,U>(p:UnsafePointer<T>) -> UnsafePointer<U> {
+	return	UnsafePointer<U>(p)
+}
 
 
 
