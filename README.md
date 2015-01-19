@@ -43,7 +43,7 @@ Instead create and use `NSFileHandle` class to perform actual I/O.
 
 "No"s
 ---------
--	No non-blocking API. All execution are blocking just like old-school BSD socket.
+-	No non-blocking API. All executions are blocking just like old-school BSD socket.
 	You can design your own non-blocking behavior using GCD dispatch and semapores.
 
 -	No I/O functions. Unix can use same I/O functions for sockets and files. And there's
