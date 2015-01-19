@@ -22,6 +22,7 @@ This is single file library.
 Copy all `.swift` files (except `main.swift`) into your project.
 Here's an example that performs an HTTP request.
 
+````swift
 	let	s	=	TCPIPSocket()
 	let	f	=	NSFileHandle(fileDescriptor: s.socketDescriptor)
 
@@ -30,6 +31,7 @@ Here's an example that performs an HTTP request.
 	let	d	=	f.readDataToEndOfFile()
 
 	println(NSString(data: d, encoding: NSUTF8StringEncoding)!)
+````
 
 The `TCPIPSocket` class is the core. And it does not provide any I/O methods. 
 Instead create and use `NSFileHandle` class to perform actual I/O.
