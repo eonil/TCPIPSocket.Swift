@@ -47,8 +47,9 @@ Instead create and use `NSFileHandle` class to perform actual I/O.
 	You can design your own non-blocking behavior using GCD dispatch and semapores.
 
 -	No I/O functions. Unix can use same I/O functions for sockets and files. And there's
-	no reason to add duplicated functions. Instead use `NSFileHandle` class to perform I/O.
-	If you have some code based on `NSFileHandle` class, it will become available for free.
+	no reason to add duplicated functions. Instead, use `NSFileHandle` class to perform I/O.
+	If you have some existing codebase with `NSFileHandle` class, it will become available 
+	for free.
 
 -	No DNS resolution. Do it yourself if you need it.
 
