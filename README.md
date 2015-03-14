@@ -39,6 +39,12 @@ Instead create and use `NSFileHandle` class to perform actual I/O.
 
 
 
+Requirements
+------------
+-	Swift 1.2.
+
+
+
 
 
 "No"s
