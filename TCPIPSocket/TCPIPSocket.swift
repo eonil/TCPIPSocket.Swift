@@ -19,6 +19,14 @@ import Foundation
 
 ///	Regular type for IPv4 address.
 struct TCPIPSocketAddress {
+	//	Compiler doesn't like this code. 
+//	init(_ bytes: (UInt8, UInt8, UInt8, UInt8)) {
+//		let	a1	=	UInt32(bytes.0) << 24
+//		let	b1	=	UInt32(bytes.1) << 16
+//		let	c1	=	UInt32(bytes.2) << 8
+//		let	d1	=	UInt32(bytes.3) << 0
+//		_number	=	a1 + b1 + c1 + d1
+//	}
 	///	Creates an address with 4 separated numbers.
 	///	The numbers must be ordered in network-endian. (MSB left)
 	init(_ a:UInt8, _ b:UInt8, _ c:UInt8, _ d:UInt8) {
@@ -179,6 +187,17 @@ extension TCPIPSocket {
 	}
 }
 
+
+extension TCPIPSocket {
+	///	Creates a file handle using socket descriptor.
+	///	So you can perform socket I/O using the file I/O interface.
+	///	The file handle does not own the socket. The socket will be closed
+	///	when the socket object dies, so you're responsible to keep the socket
+	///	alive while the file handle object alive.
+	func instantiateFileHandle() -> NSFileHandle {
+		return	NSFileHandle(fileDescriptor: socketDescriptor, closeOnDealloc: false)
+	}
+}
 
 
 

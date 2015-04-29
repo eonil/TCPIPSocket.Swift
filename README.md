@@ -4,7 +4,7 @@ Eonil/TCPIPSocket.Swift
 Hoon H.
 
 
-Provides simple, regular, thin, synchronous and minimal TCP/IP socket wrapper on Swift.
+Provides simple, regular, thin, synchronous, asynchronous and minimal TCP/IP socket wrapper on Swift.
 
 This just wraps BSD socket as is, and does not try to add any extra abstraction.
 I believe this can serve any applications, but I intended this for quicky apps. 
@@ -18,8 +18,8 @@ I believe this can serve any applications, but I intended this for quicky apps.
 
 How To Use
 ----------
-This is single file library.
-Copy all `.swift` files (except `main.swift`) into your project.
+This is a single file library.
+`TCPIPSocket.swift` file into your project.
 Here's an example that performs an HTTP request.
 
 ````swift
@@ -36,6 +36,9 @@ Here's an example that performs an HTTP request.
 The `TCPIPSocket` class is the core. And it does not provide any I/O methods. 
 Instead create and use `NSFileHandle` class to perform actual I/O.
 
+Though this library is originally intended to provide synchronous interface, 
+but also provides asynchronous I/O through `NSFileHandle`'s asynchronous interface.
+See `main.swift` for example.
 
 
 
@@ -49,9 +52,6 @@ Requirements
 
 "No"s
 ---------
--	No non-blocking API. All executions are blocking just like old-school BSD socket.
-	You can design your own non-blocking behavior using GCD dispatch and semapores.
-
 -	No I/O functions. Unix can use same I/O functions for sockets and files. And there's
 	no reason to add duplicated functions. Instead, use `NSFileHandle` class to perform I/O.
 	If you have some existing codebase with `NSFileHandle` class, it will become available 
@@ -60,7 +60,7 @@ Requirements
 -	No DNS resolution. Do it yourself if you need it.
 
 -	No any other socket mode. Strictly only for TCP/IP. No UDP, no raw, and no any other 
-	protocols I have never heard of its name in recent 10 years...
+	protocol I never have heard of its name in recent 10 years...
 
 
 
@@ -70,7 +70,7 @@ Requirements
 
 Missings
 --------
--	IPv6 support is desired feature, but I have no time to work on it. It will be added 
+-	IPv6 support is a desired feature, but I have no time to work on it. It will be added 
 	when I feel need for it.
 
 -	Some fundamental socket functions such as `select`. This also will be added when I 
