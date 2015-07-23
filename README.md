@@ -1,3 +1,5 @@
+**WARNING** [According to Apple's guideline](https://github.com/Eonil/TCPIPSocket.Swift/issues/1), accessing network socket using file descriptor may cause some unknown failures. So I do not recommend my library for production use. Use this only for personal or quick prototyping purpose until I provide proper socket methods. I am willing to add those methods, but it's unclear when to do it.
+
 Eonil/TCPIPSocket.Swift
 =======================
 2015/01/19
