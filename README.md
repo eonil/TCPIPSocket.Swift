@@ -1,4 +1,4 @@
-**WARNING** [According to Apple's guideline](https://github.com/Eonil/TCPIPSocket.Swift/issues/1), accessing network socket using file descriptor may cause some unknown failures. So I do not recommend accessing network via `NSFileSHandle`. Instead, use `NSStream` and `CFStream` or [`CFStreamCreatePairWithSocket`](http://stackoverflow.com/questions/9902707/ios-getting-cfreadstream-cfwritestream-from-a-socket). You still can use my library to make an established socket connection. I will update my library as soon as possible if I can make some time.
+**WARNING** [According to Apple's guideline](https://github.com/Eonil/TCPIPSocket.Swift/issues/1), accessing network socket using `NSFileSHandle` may cause some unknown failures. So I do not recommend accessing network via `NSFileSHandle`. Instead, use `NSStream` and `CFStream` or [`CFStreamCreatePairWithSocket`](http://stackoverflow.com/questions/9902707/ios-getting-cfreadstream-cfwritestream-from-a-socket). You still can use my library to make an established socket connection. I will update my library as soon as possible if I can make some time.
 
 Eonil/TCPIPSocket.Swift
 =======================
