@@ -1,4 +1,8 @@
-**WARNING** [According to Apple's guideline](https://github.com/Eonil/TCPIPSocket.Swift/issues/1), accessing network socket using `NSFileSHandle` may cause some unknown failures. You still can do that, but I don't recommend it. Instead, use `NSStream` and `CFStream` or [`CFStreamCreatePairWithSocket`](http://stackoverflow.com/questions/9902707/ios-getting-cfreadstream-cfwritestream-from-a-socket). You still can use my library to make an established socket connection for those features. I will update my library as soon as possible if I can make some time.
+**WARNING** [According to Apple's guideline](https://github.com/Eonil/TCPIPSocket.Swift/issues/1), 
+accessing network socket using `NSFileSHandle` may cause some unknown failures. You still can do that,
+but I don't recommend it. Instead, use `NSStream` and `CFStream` or [`CFStreamCreatePairWithSocket`](http://stackoverflow.com/questions/9902707/ios-getting-cfreadstream-cfwritestream-from-a-socket).
+You still can use my library to make an established socket connection for those features. I will 
+update code examples as soon as possible if I can make some time.
 
 Eonil/TCPIPSocket.Swift
 =======================
@@ -46,7 +50,7 @@ See `main.swift` for example.
 
 Requirements
 ------------
--	Swift 1.2.
+-	Swift 2.1.
 
 
 

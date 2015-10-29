@@ -24,7 +24,7 @@ func testSynchronousIO() {
 	s.connect(TCPIPSocketAddress(58, 123, 220, 24), 80)
 	f.writeData(("GET / HTTP/1.0\n\n" as NSString).dataUsingEncoding(NSUTF8StringEncoding)!)
 	let	d	=	f.readDataToEndOfFile()
-	println(NSString(data: d, encoding: NSUTF8StringEncoding)!)
+	print(NSString(data: d, encoding: NSUTF8StringEncoding)!)
 }
 testSynchronousIO()
 
@@ -52,7 +52,7 @@ func testAsynchronousIO() {
 	}
 	f.readabilityHandler	=	{ (f: NSFileHandle!) -> () in
 		let	s	=	NSString(data: f.availableData, encoding: NSUTF8StringEncoding)!
-		println(s)
+		print(s)
 	}
 	sleep(3)
 }

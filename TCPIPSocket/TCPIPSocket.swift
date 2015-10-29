@@ -167,7 +167,7 @@ extension TCPIPSocket {
 		get {
 			var	v	=	UInt32(0)
 			var	sz	=	socklen_t(sizeof(UInt32))
-			var	r	=	getsockopt(self.socketDescriptor, IPPROTO_TCP, TCP_NODELAY, &v, &sz)
+			let	r	=	getsockopt(self.socketDescriptor, IPPROTO_TCP, TCP_NODELAY, &v, &sz)
 			postconditionDarwinAPICallResultCodeState(r == 0)
 			return	v != 0
 		}
